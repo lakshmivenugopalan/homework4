@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12"></div>
+                <div class="col col-12 col sm-3">
+                    <table class="table">
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" class="form-control" id="Name"></td>
+                        </tr>
+                        <tr>
+
+                            <td>Address</td>
+                            <td><input type="text" class="form-control" id="Address"></td>
+                        </tr>
+                        <tr>
+                            <td>EMAIL</td>
+                            <td><input type="text" class="form-control" id="EMAIL"></td>
+                        </tr>
+                        <tr>
+                            <td>DOB</td>
+                            <td><input type="date" id="DOB"></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td><input type="text" class="form-control" id="Username"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="text" class="form-control" id="Password"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirmpassword</td>
+                            <td><input type="text" class="form-control" id="Confirmpassword"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-secondary" onclick=checkValidation();>REGISTER</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    function checkValidation() {
+        var Name = document.getElementById("Name").value;
+        var Address = document.getElementById("Address").value;
+        var EMAIL = document.getElementById("EMAIL").value;
+        var DOB = document.getElementById("DOB").value;
+        var Username = document.getElementById("Username").value;
+        var Password = document.getElementById("Password").value;
+        var Confirmpassword = document.getElementById("Confirmpassword").value;
+        if (Password == Confirmpassword) {
+            console.log("valid");
+        } else {
+            console.log("PASSWORD and CONFIRMPASSWORD should be same");
+        }
+        var user = {
+            Name: Name,
+            Address: Address,
+            EMAIL: EMAIL,
+            DOB: DOB,
+            Username: Username,
+            Password: Password,
+            Confirmpassword: Confirmpassword,
+        }
+        console.log(user);
+
+    }
+</script>
+
+</html>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
